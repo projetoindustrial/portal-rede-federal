@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://projetoindustrial.github.io/portal-rede-federal/">
 <meta property="og:image" content="https://projetoindustrial.github.io/portal-rede-federal/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1E4A3D">
+<meta name="theme-color" content="#08263D">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
 {
@@ -43,13 +43,13 @@
 
   header.top{background:var(--verde-escuro);color:#F3F4EE;padding:20px 16px 0;border-bottom:3px solid var(--ocre);}
   header.top .inner{max-width:760px;margin:0 auto;}
-  header.top .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#B9CFC5;margin:0 0 4px;}
+  header.top .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.75);margin:0 0 4px;}
   header.top h1{margin:0 0 10px;font-size:21px;line-height:1.25;color:#fff;}
 
   nav.tabs{display:flex;overflow-x:auto;gap:2px;padding:0 12px;-ms-overflow-style:none;scrollbar-width:none;}
   nav.tabs::-webkit-scrollbar{display:none;}
   nav.tabs button{
-    flex:0 0 auto;background:none;border:none;color:#B9CFC5;font-size:13px;font-family:inherit;
+    flex:0 0 auto;background:none;border:none;color:rgba(255,255,255,.75);font-size:13px;font-family:inherit;
     padding:9px 11px 11px;cursor:pointer;border-bottom:2.5px solid transparent;white-space:nowrap;
   }
   nav.tabs button.active{color:#fff;border-bottom-color:var(--ocre);font-weight:600;}
@@ -72,14 +72,14 @@
 
   .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:12px 13px;margin-bottom:8px;}
   .card.clickable{cursor:pointer;}
-  .card.clickable:active{background:#EFF1EA;}
+  .card.clickable:active{background:var(--color-surface-page);}
   .row1{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
   .sigla{font-family:Georgia,serif;font-weight:700;font-size:16px;}
   .nome-sec{font-size:12.5px;color:var(--muted);margin-top:2px;}
   .n{font-size:12px;color:var(--verde-escuro);white-space:nowrap;}
-  .selo{display:inline-block;margin-top:6px;font-size:11px;padding:2px 8px;background:var(--alerta-bg);color:#7A5A20;border-radius:10px;}
+  .selo{display:inline-block;margin-top:6px;font-size:11px;padding:2px 8px;background:var(--alerta-bg);color:var(--color-status-warning);border-radius:10px;}
   .pres-agregado{margin-top:8px;padding:8px 10px;background:var(--verde-claro);border-radius:8px;font-size:13px;color:var(--verde-escuro);}
-  .selo.raro{background:var(--ocre-bg);color:#8A5C10;}
+  .selo.raro{background:var(--ocre-bg);color:var(--color-status-warning);}
 
   .backbtn{display:inline-flex;align-items:center;gap:5px;background:none;border:none;color:var(--verde-escuro);font-size:13.5px;font-family:inherit;cursor:pointer;padding:14px 0 4px;}
 
@@ -90,10 +90,10 @@
   .curso-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--verde);border-radius:var(--radius);padding:12px 13px;margin-bottom:8px;}
   .curso-card .nome{font-weight:600;font-size:14.5px;margin-bottom:5px;}
   .badges{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px;}
-  .badge{font-size:11px;padding:2px 8px;border-radius:10px;background:#EEF3EF;color:var(--verde-escuro);white-space:nowrap;}
-  .badge.confianca.alta{background:#E3F0E9;color:var(--verde-escuro);font-weight:600;}
-  .badge.confianca.media{background:#F2E9DC;color:#8A5C10;}
-  .badge.gratuito{background:var(--ocre-bg);color:#8A5C10;}
+  .badge{font-size:11px;padding:2px 8px;border-radius:10px;background:var(--color-brand-cyan-muted);color:var(--verde-escuro);white-space:nowrap;}
+  .badge.confianca.alta{background:color-mix(in srgb,var(--color-brand-cyan) 18%,var(--color-surface-card));color:var(--verde-escuro);font-weight:600;}
+  .badge.confianca.media{background:var(--color-status-warning-bg);color:var(--color-status-warning);}
+  .badge.gratuito{background:var(--ocre-bg);color:var(--color-status-warning);}
   .info{font-size:12px;color:var(--muted);}
   .info div{margin-top:2px;}
 
@@ -112,7 +112,7 @@
 
   /* eixo cards */
   .eixo-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:13px 14px;margin-bottom:8px;cursor:pointer;}
-  .eixo-card:active{background:#EFF1EA;}
+  .eixo-card:active{background:var(--color-surface-page);}
   .eixo-card .nome{font-family:Georgia,serif;font-weight:700;font-size:15px;}
   .eixo-card .bar-wrap{margin-top:8px;height:6px;background:var(--line);border-radius:3px;overflow:hidden;}
   .eixo-card .bar{height:100%;background:var(--verde);}
@@ -133,7 +133,7 @@
   .compare-seg{height:100%;}
   .compare-seg.a{background:var(--verde);}
   .compare-seg.b{background:var(--ocre);}
-  .compare-seg.c{background:#A9B3AC;}
+  .compare-seg.c{background:var(--color-border-strong);}
 
   /* mapa regional */
   .heat-row{margin-bottom:14px;}
@@ -181,22 +181,88 @@
 
   /* barra superior: link de volta e botão de tema */
   .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;}
-  .topback{color:#B9CFC5;font-size:12px;text-decoration:none;}
+  .topback{color:rgba(255,255,255,.75);font-size:12px;text-decoration:none;}
   .topback:hover,.topback:focus-visible{color:#fff;text-decoration:underline;}
   #tema{background:rgba(255,255,255,.12);color:#F3F4EE;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 12px;font:inherit;font-size:12px;cursor:pointer;white-space:nowrap;}
   footer .aviso{display:block;margin-top:8px;}
   :root[data-theme="dark"]{color-scheme:dark;--bg:#121816;--surface:#1b2420;--ink:#e6ece8;--muted:#9fb0a8;--line:#2c3833;--verde:#2f7a66;--verde-escuro:#8fd1bb;--verde-claro:#1f332c;--ocre:#d9a24a;--ocre-bg:#33291a;--alerta-bg:#33291a;--vermelho:#e07a66;}
-  :root[data-theme="dark"] header.top{background:#173629;}
-  :root[data-theme="dark"] .card.clickable:active,:root[data-theme="dark"] .eixo-card:active{background:#26332d;}
-  :root[data-theme="dark"] .selo,:root[data-theme="dark"] .selo.raro,:root[data-theme="dark"] .badge.confianca.media,:root[data-theme="dark"] .badge.gratuito{color:#e3c07c;}
-  :root[data-theme="dark"] .badge{background:#243029;}
-  :root[data-theme="dark"] .badge.confianca.alta{background:#1f3a30;}
-  :root[data-theme="dark"] .compare-seg.c{background:#5b6b63;}
+  :root[data-theme="dark"] header.top{background:var(--color-surface-sidebar);}
+  :root[data-theme="dark"] .card.clickable:active,:root[data-theme="dark"] .eixo-card:active{background:color-mix(in srgb,var(--color-surface-card) 85%,var(--color-text-primary));}
+  :root[data-theme="dark"] .selo,:root[data-theme="dark"] .selo.raro,:root[data-theme="dark"] .badge.confianca.media,:root[data-theme="dark"] .badge.gratuito{color:var(--color-status-warning);}
+  :root[data-theme="dark"] .badge{background:var(--color-brand-cyan-muted);}
+  :root[data-theme="dark"] .badge.confianca.alta{background:color-mix(in srgb,var(--color-brand-cyan) 18%,var(--color-surface-card));}
+  :root[data-theme="dark"] .compare-seg.c{background:var(--color-border-strong);}
   @media print{#tema,.topback{display:none;}}
 </style>
 <!-- Casca compartilhada do Projeto Industrial (menu único em /shell/nav.json) -->
 <link rel="stylesheet" href="/shell/pi-shell.css">
 <script src="/shell/pi-shell.js" defer data-pi-mode="fab" data-pi-pos="br" data-pi-active="portal-rede-federal"></script>
+<style id="ds-bridge">
+/* Ponte do Design System v2 (tokens com contraste corrigido, out/2026). Remover este bloco desfaz as variáveis;
+   as demais trocas estão nas regras do CSS e na escala do mapa regional (corIndice). */
+:root {
+  --color-brand-deep: #08263d;
+  --color-brand-petroleum: #0e5263;
+  --color-brand-cyan: #00a6a6;
+  --color-brand-cyan-muted: #e6f7f7;
+  --color-surface-page: #f4f7fa;
+  --color-surface-card: #ffffff;
+  --color-surface-sidebar: #ffffff;
+  --color-surface-overlay: rgba(8, 38, 61, 0.45);
+  --color-text-primary: #172b3a;
+  --color-text-secondary: #526575;
+  --color-text-inverse: #ffffff;
+  --color-text-link: #0e5263;
+  --color-text-link-hover: #08263d;
+  --color-status-success: #136b49;
+  --color-status-success-bg: #e8f5f0;
+  --color-status-warning: #8a5a00;
+  --color-status-warning-bg: #fdf3e3;
+  --color-status-danger: #a82f2f;
+  --color-status-danger-bg: #fceaea;
+  --color-status-info: #0e5263;
+  --color-status-info-bg: #e8eef2;
+  --color-border-default: #d0d9e0;
+  --color-border-strong: #7d8f9e;
+  --color-border-focus: #00a6a6;
+  --color-focus-ring: 0 0 0 3px rgba(0, 166, 166, 0.35);
+  --bg:var(--color-surface-page);--surface:var(--color-surface-card);--ink:var(--color-text-primary);--muted:var(--color-text-secondary);--line:var(--color-border-default);
+  --verde:var(--color-brand-petroleum);--verde-claro:var(--color-brand-cyan-muted);--ocre:var(--color-brand-cyan);
+  --ocre-bg:var(--color-status-warning-bg);--alerta-bg:var(--color-status-warning-bg);--vermelho:var(--color-status-danger);
+  --verde-escuro:var(--color-brand-deep);
+}
+:root[data-theme="dark"] {
+  --color-brand-deep: #0b1520;
+  --color-brand-petroleum: #1a7a8c;
+  --color-brand-cyan: #00c4c4;
+  --color-brand-cyan-muted: #0d2a2e;
+  --color-surface-page: #0b1520;
+  --color-surface-card: #142333;
+  --color-surface-sidebar: #0f1c28;
+  --color-surface-overlay: rgba(0, 0, 0, 0.55);
+  --color-text-primary: #e8eef2;
+  --color-text-secondary: #8ba3b5;
+  --color-text-inverse: #ffffff;
+  --color-text-link: #5eb8c4;
+  --color-text-link-hover: #00c4c4;
+  --color-status-success: #2da56e;
+  --color-status-success-bg: #0f2a1c;
+  --color-status-warning: #d49a2a;
+  --color-status-warning-bg: #2a220e;
+  --color-status-danger: #e05555;
+  --color-status-danger-bg: #2a1212;
+  --color-status-info: #5eb8c4;
+  --color-status-info-bg: #0f1c28;
+  --color-border-default: #243447;
+  --color-border-strong: #5f7890;
+  --color-border-focus: #00c4c4;
+  --color-focus-ring: 0 0 0 3px rgba(0, 196, 196, 0.4);
+  --bg:var(--color-surface-page);--surface:var(--color-surface-card);--ink:var(--color-text-primary);--muted:var(--color-text-secondary);--line:var(--color-border-default);
+  --verde:var(--color-brand-petroleum);--verde-claro:var(--color-brand-cyan-muted);--ocre:var(--color-brand-cyan);
+  --ocre-bg:var(--color-status-warning-bg);--alerta-bg:var(--color-status-warning-bg);--vermelho:var(--color-status-danger);
+  --verde-escuro:var(--color-text-link);
+}
+</style>
 </head>
 <body>
 
@@ -502,17 +568,17 @@ function voltarTemaEixo(){ estado.cursoSel=null; render(); atualizarHash(); }
 
 // ---------------- ABA: MAPA REGIONAL ----------------
 function corIndice(idx){
-  if(idx===null || idx===undefined) return '#9AA79F';
-  if(idx>=1.8) return '#1E4A3D';
-  if(idx>=1.2) return '#2F6F5E';
-  if(idx>=0.8) return '#7FA396';
-  if(idx>=0.4) return '#B7C4BC';
-  return '#DCE3DE';
+  if(idx===null || idx===undefined) return '#526575';
+  if(idx>=1.8) return '#08263D';
+  if(idx>=1.2) return '#0E5263';
+  if(idx>=0.8) return '#1A7A8C';
+  if(idx>=0.4) return '#80D2D2';
+  return '#CCEDED';
 }
 function textoIndice(idx){
   // fundos claros (índice baixo) precisam de texto escuro, não branco
   if(idx===null || idx===undefined) return '#fff';
-  return idx>=0.8 ? '#fff' : '#2A332F';
+  return idx>=0.8 ? '#fff' : '#172B3A';
 }
 function viewMapa(){
   let html = `<h2 class="section-title">Sotaque regional por tema</h2>
@@ -784,7 +850,7 @@ render();
 (function(){
 var r=document.documentElement,b=document.getElementById("tema"),t="light";
 try{t=localStorage.getItem("tema")==="dark"?"dark":"light"}catch(e){}
-function ap(x){r.setAttribute("data-theme",x);b.textContent=x==="dark"?"Tema claro":"Tema escuro";var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=x==="dark"?"#173629":"#1E4A3D"}
+function ap(x){r.setAttribute("data-theme",x);b.textContent=x==="dark"?"Tema claro":"Tema escuro";var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=x==="dark"?"#0F1C28":"#08263D"}
 ap(t);b.addEventListener("click",function(){t=t==="dark"?"light":"dark";ap(t);try{localStorage.setItem("tema",t)}catch(e){}});
 })();
 </script>
