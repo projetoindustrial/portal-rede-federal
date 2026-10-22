@@ -203,7 +203,7 @@
 :root {
   --color-brand-deep: #08263d;
   --color-brand-petroleum: #0e5263;
-  --color-brand-cyan: #00a6a6;
+  --color-brand-cyan: #009f9f;
   --color-brand-cyan-muted: #e6f7f7;
   --color-surface-page: #f4f7fa;
   --color-surface-card: #ffffff;
@@ -224,8 +224,8 @@
   --color-status-info-bg: #e8eef2;
   --color-border-default: #d0d9e0;
   --color-border-strong: #7d8f9e;
-  --color-border-focus: #00a6a6;
-  --color-focus-ring: 0 0 0 3px rgba(0, 166, 166, 0.35);
+  --color-border-focus: #0e5263;
+  --color-focus-ring: 0 0 0 2px #ffffff, 0 0 0 4px #0e5263;
   --bg:var(--color-surface-page);--surface:var(--color-surface-card);--ink:var(--color-text-primary);--muted:var(--color-text-secondary);--line:var(--color-border-default);
   --verde:var(--color-brand-petroleum);--verde-claro:var(--color-brand-cyan-muted);--ocre:var(--color-brand-cyan);
   --ocre-bg:var(--color-status-warning-bg);--alerta-bg:var(--color-status-warning-bg);--vermelho:var(--color-status-danger);
@@ -256,13 +256,41 @@
   --color-border-default: #243447;
   --color-border-strong: #5f7890;
   --color-border-focus: #00c4c4;
-  --color-focus-ring: 0 0 0 3px rgba(0, 196, 196, 0.4);
+  --color-focus-ring: 0 0 0 2px #0b1520, 0 0 0 4px #00c4c4;
   --bg:var(--color-surface-page);--surface:var(--color-surface-card);--ink:var(--color-text-primary);--muted:var(--color-text-secondary);--line:var(--color-border-default);
   --verde:var(--color-brand-petroleum);--verde-claro:var(--color-brand-cyan-muted);--ocre:var(--color-brand-cyan);
   --ocre-bg:var(--color-status-warning-bg);--alerta-bg:var(--color-status-warning-bg);--vermelho:var(--color-status-danger);
   --verde-escuro:var(--color-text-link);
 }
+/* DS v2.1: foco visível e alvos de toque >= 44px */
+:focus-visible { outline: 2px solid var(--color-border-focus); outline-offset: 2px; }
+@media (pointer: coarse) { button, select, summary, [role="button"], [role="tab"] { min-height: 44px; } }
 </style>
+<style id="ds-extra">
+/* DS v2.4: tokens extras e componentes StatusBadge/EmptyState (ver COMPONENTES.md). Remover este bloco desfaz. */
+:root{--space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;--space-6:1.5rem;--space-12:3rem;--radius-md:8px;--radius-lg:12px;--radius-full:9999px;--font-size-h3:1.0625rem;--font-size-body:0.9375rem;--font-size-label:0.75rem;--font-weight-semibold:600;--control-height-md:40px;--control-touch-min:44px;--shadow-focus:var(--color-focus-ring);--color-surface-hover:#e8eaeb;--color-status-caution:#b84f12;--color-status-caution-bg:#fbf4f1;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--color-surface-hover:#293746;--color-status-caution:#fa9364;--color-status-caution-bg:#31292b;}}
+:root[data-theme="dark"]{--color-surface-hover:#293746;--color-status-caution:#fa9364;--color-status-caution-bg:#31292b;}
+/* ---------- StatusBadge (sempre com texto; a cor nunca é o único sinal) ---------- */
+.ds-badge { display: inline-flex; align-items: center; gap: var(--space-1); padding: 2px var(--space-2); border-radius: var(--radius-full); font-size: var(--font-size-label); font-weight: var(--font-weight-semibold); line-height: 1.4; white-space: nowrap; background: var(--color-surface-hover); color: var(--color-text-secondary); }
+.ds-badge::before { content: ""; width: .5em; height: .5em; border-radius: 50%; background: currentColor; flex: none; }
+.ds-badge--success { background: var(--color-status-success-bg); color: var(--color-status-success); }
+.ds-badge--warning { background: var(--color-status-warning-bg); color: var(--color-status-warning); }
+.ds-badge--caution { background: var(--color-status-caution-bg); color: var(--color-status-caution); }
+.ds-badge--danger  { background: var(--color-status-danger-bg);  color: var(--color-status-danger); }
+.ds-badge--info    { background: var(--color-status-info-bg);    color: var(--color-status-info); }
+
+/* ---------- EmptyState (explica e oferece o próximo passo) ---------- */
+.ds-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-2); padding: var(--space-12) var(--space-6); border: 1px dashed var(--color-border-strong); border-radius: var(--radius-lg); background: var(--color-surface-card); color: var(--color-text-secondary); }
+.ds-empty__title { margin: 0; font-size: var(--font-size-h3); font-weight: var(--font-weight-semibold); color: var(--color-text-primary); }
+.ds-empty__text { margin: 0; max-width: 46ch; font-size: var(--font-size-body); }
+.ds-empty__action { margin-top: var(--space-3); display: inline-flex; align-items: center; justify-content: center; min-height: var(--control-height-md); padding: 0 var(--space-4); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); background: var(--color-surface-card); color: var(--color-text-link); font: inherit; font-weight: var(--font-weight-semibold); cursor: pointer; }
+.ds-empty__action:hover { background: var(--color-surface-hover); }
+.ds-empty__action:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+@media (pointer: coarse) { .ds-empty__action { min-height: var(--control-touch-min); } }
+
+</style>
+
 </head>
 <body>
 
@@ -617,7 +645,7 @@ function viewInstituicoes(){
     const instGrat = new Set(DADOS.cursos_atuais.filter(c=>c.g==='Sim').map(c=>c.iid));
     lista = lista.filter(i => instGrat.has(i.id));
   }
-  if(lista.length===0) return `<div class="empty">Nenhuma instituição encontrada para esse filtro.</div>`;
+  if(lista.length===0) return `<div class="ds-empty"><h3 class="ds-empty__title">Nenhuma instituição encontrada</h3><p class="ds-empty__text">Nenhuma instituição bate com os filtros atuais. Remova um filtro ou busque por outro termo.</p><button type="button" class="ds-empty__action" onclick="limparFiltrosInst()">Limpar filtros</button></div>`;
 
   const ord = ORDENACOES.find(o=>o.id===estado.ordenarPor);
   let html = `<h2 class="section-title" style="margin-top:14px;">Instituições</h2>
@@ -662,7 +690,7 @@ function pnpRow(p){
 }
 function viewInstDetalhe(){
   const inst = instById(estado.instId);
-  if(!inst) return `<div class="empty">Instituição não encontrada.</div>`;
+  if(!inst) return `<div class="ds-empty"><h3 class="ds-empty__title">Instituição não encontrada</h3><p class="ds-empty__text">Esse endereço não corresponde a nenhuma instituição do catálogo.</p><button type="button" class="ds-empty__action" onclick="voltarListaInst()">Voltar à lista</button></div>`;
   const cursos = cursosDe(inst.id);
   const pnp = pnpDe(inst.id);
   const PAGINA = 20;
@@ -683,7 +711,7 @@ function viewInstDetalhe(){
       html += `<button class="loadmore" id="carregar-cursos">Carregar mais ${Math.min(PAGINA,restantes)} de ${restantes} restantes</button>`;
     }
   } else if(!pnp.length){
-    html += `<div class="empty">Nenhum curso catalogado para esta instituição ainda.</div>`;
+    html += `<div class="ds-empty"><h3 class="ds-empty__title">Nenhum curso catalogado</h3><p class="ds-empty__text">Esta instituição ainda não tem cursos catalogados.</p></div>`;
   }
 
   if(pnp.length){
@@ -786,6 +814,8 @@ function renderFiltros(){
 const BUSCA_VISIVEL = {geral:false, temas:true, mapa:false, instituicoes:true, raridades:true, estados:false};
 
 // ---------------- RENDER PRINCIPAL ----------------
+function limparFiltrosInst(){estado.filtroRegiao=null;estado.soGratuito=false;estado.busca='';$busca.value='';render();}
+function voltarListaInst(){estado.instId=null;window.scrollTo(0,0);render();atualizarHash();}
 function render(){
   renderTabs();
   atualizarTitulo();
