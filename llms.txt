@@ -1,0 +1,19 @@
+# Portal de Cursos — Rede Federal EPCT
+
+> 64 instituições, 1.415 cursos no catálogo atual (2026) e 8.587 linhas de oferta do censo PNP 2023. Dados do censo PNP/MEC-SETEC (2023) cruzados com o catálogo dos Institutos Federais pesquisado em 2026.
+
+## Páginas
+- [Instituições](https://projetoindustrial.github.io/portal-rede-federal/instituicoes/)
+- [Estados](https://projetoindustrial.github.io/portal-rede-federal/estados.html)
+- [Eixos](https://projetoindustrial.github.io/portal-rede-federal/eixos.html)
+- [Cursos raros](https://projetoindustrial.github.io/portal-rede-federal/raros.html)
+- [Sobre os números](https://projetoindustrial.github.io/portal-rede-federal/sobre-os-numeros.html)
+
+## Dados
+- [Cursos atuais CSV](https://projetoindustrial.github.io/portal-rede-federal/dados/cursos_atuais.csv)
+- [Instituições CSV](https://projetoindustrial.github.io/portal-rede-federal/dados/instituicoes.csv)
+- [Ofertas do censo CSV](https://projetoindustrial.github.io/portal-rede-federal/dados/pnp_ofertas.csv)
+- [llms-full.txt](https://projetoindustrial.github.io/portal-rede-federal/llms-full.txt)
+
+## Aviso
+Censo é histórico (2023), sem garantia de vaga aberta; disponibilidade nos sites foi pesquisada em 2026. Confirme no site da instituição.

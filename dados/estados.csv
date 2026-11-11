@@ -1,0 +1,28 @@
+uf,regiao,n_inst,n_campi,n_ofertas,mat,conc,evad,n_eixos,n_cursos,top_eixo
+RS,Sul,5,44,1011,545128,448448,54506,13,251,Desenvolvimento Educacional e Social
+MG,Sudeste,11,72,1415,178193,76254,16072,12,269,Desenvolvimento Educacional e Social
+RJ,Sudeste,5,50,520,84203,13161,9168,13,160,Controle e Processos Industriais
+SP,Sudeste,1,40,736,77558,18309,20142,12,187,Desenvolvimento Educacional e Social
+MS,Centro-Oeste,1,10,274,66320,12506,8474,9,66,Desenvolvimento Educacional e Social
+CE,Nordeste,1,33,538,63730,8608,10201,12,163,Desenvolvimento Educacional e Social
+ES,Sudeste,1,23,294,62843,26081,8722,12,119,Desenvolvimento Educacional e Social
+SC,Sul,2,37,572,61165,9821,13526,12,193,Controle e Processos Industriais
+BA,Nordeste,2,36,430,48896,7696,6647,12,108,Desenvolvimento Educacional e Social
+PB,Nordeste,4,24,267,47720,10243,3647,14,129,Ambiente e Saúde
+RN,Nordeste,4,25,361,46859,11904,8966,12,135,Desenvolvimento Educacional e Social
+MA,Nordeste,2,30,357,45833,5473,2922,12,107,Desenvolvimento Educacional e Social
+PE,Nordeste,3,24,377,40057,5439,5676,13,127,Informação e Comunicação
+GO,Centro-Oeste,2,26,398,38260,6329,5260,12,141,Desenvolvimento Educacional e Social
+PI,Nordeste,4,23,357,34524,5805,4422,13,108,Desenvolvimento Educacional e Social
+PR,Sul,1,26,314,30924,3866,3377,12,126,Informação e Comunicação
+PA,Norte,3,20,365,30874,5182,4057,12,117,Desenvolvimento Educacional e Social
+RO,Norte,1,10,190,28778,9602,2849,11,89,Gestão e Negócios
+MT,Centro-Oeste,1,19,266,27076,3552,2768,12,103,Desenvolvimento Educacional e Social
+DF,Centro-Oeste,1,10,175,24273,4062,5262,12,90,Desenvolvimento Educacional e Social
+AL,Nordeste,2,17,176,23830,5254,3592,12,70,Informação e Comunicação
+AM,Norte,1,17,238,22716,3832,1616,11,87,Informação e Comunicação
+TO,Norte,1,12,155,18410,2946,3871,12,81,Recursos Naturais
+SE,Nordeste,1,10,82,11543,1477,2590,11,46,Informação e Comunicação
+AP,Norte,1,6,114,7923,1321,1354,12,68,Gestão e Negócios
+RR,Norte,2,6,72,7151,1078,520,10,47,Desenvolvimento Educacional e Social
+AC,Norte,1,6,66,6727,754,898,9,45,Recursos Naturais
