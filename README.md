@@ -8,3 +8,7 @@ Compare cursos, instituições e regiões da Rede Federal de Educação Profissi
 - Disponibilidade de cursos nos sites institucionais: pesquisada em 2026, pode ter mudado. Confirme sempre no site da instituição.
 - Arquivo único (`index.html`), sem dependências externas e sem coleta de dados.
 - Projeto independente, sem vínculo com o MEC nem com as instituições citadas.
+
+## Licença
+
+O código deste repositório está sob a licença [MIT](LICENSE). Dados, nomes, textos e marcas de terceiros citados ou reunidos aqui continuam sob as licenças e os direitos de cada fonte e não são cobertos por esta licença.
